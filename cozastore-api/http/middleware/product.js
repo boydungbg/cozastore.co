@@ -22,7 +22,8 @@ module.exports = {
   },
   validateAddProduct: async (req, res, next) => {
     let option = [];
-    if (req.body) {
+    console.log(req.body)
+    if (req.body && req.body.color) {
       if (typeof req.body.color === "string") {
         option = {
           color: req.body.color,
